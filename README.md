@@ -19,9 +19,18 @@ Available Cheat Codes:
 	^ + t: Cycle tintAdjustmentMode
 	^ + u: Print user defaults
 	^ + l: Print autolayout backtrace
-	^ + d: Print autolayout backtrace
 	^ + d: Print documents directory path
 	^ + h: Print the list of available commands
+```
+
+## Using
+
+```swift
+class AppDelegate {
+  override var keyCommands: [UIKeyCommand]? {
+    return UIKeyCommand.cheatCodes
+  }
+}
 ```
 
 ## Notes

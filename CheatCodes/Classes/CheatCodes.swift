@@ -44,7 +44,6 @@ extension UIKeyCommand {
         CheatCodeCommand(input: "t", modifierFlags: [.control], action: #selector(UIKeyCommand.toggleTintAdjustmentMode), discoverabilityTitle: "Cycle tintAdjustmentMode"),
         CheatCodeCommand(input: "u", modifierFlags: [.control], action: #selector(UIKeyCommand.dumpUserDefaults), discoverabilityTitle: "Print user defaults"),
         CheatCodeCommand(input: "l", modifierFlags: [.control], action: #selector(UIKeyCommand.autolayoutTrace), discoverabilityTitle: "Print autolayout backtrace"),
-        CheatCodeCommand(input: "d", modifierFlags: [.control], action: #selector(UIKeyCommand.showDocumentsPath), discoverabilityTitle: "Print autolayout backtrace"),
         CheatCodeCommand(input: "d", modifierFlags: [.control], action: #selector(UIKeyCommand.showDocumentsPath), discoverabilityTitle: "Print documents directory path"),
         CheatCodeCommand(input: "h", modifierFlags: [.control], action: #selector(UIKeyCommand.showHelp), discoverabilityTitle: "Print the list of available commands"),
         ]
