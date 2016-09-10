@@ -1,0 +1,16 @@
+PODS:
+  - CheatCodes (0.1.0)
+
+DEPENDENCIES:
+  - CheatCodes (from `../`)
+
+EXTERNAL SOURCES:
+  CheatCodes:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CheatCodes: 0a230c3205d246cb75f3cc34fac0fa5e10700a39
+
+PODFILE CHECKSUM: cc2c188fc6ce31043215955ea32f2c5135dfeeb9
+
+COCOAPODS: 1.0.1

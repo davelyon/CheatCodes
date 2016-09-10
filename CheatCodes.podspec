@@ -9,34 +9,36 @@
 Pod::Spec.new do |s|
   s.name             = 'CheatCodes'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CheatCodes.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'UIKeyCommand shortcuts for debugging applications in the simulator'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+CheatCodes is a drop in tool to enable some basic debugging functionality in the simulator by using `UIKeyCommand`.
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/CheatCodes'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+Currently, it ships with the following already available:
+
+```
+Available Cheat Codes:
+^ + t: Cycle tintAdjustmentMode
+^ + u: Print user defaults
+^ + l: Print autolayout backtrace
+^ + d: Print autolayout backtrace
+^ + d: Print documents directory path
+^ + h: Print the list of available commands
+```
+DESC
+
+  s.homepage         = 'https://github.com/davelyon/CheatCodes'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dave Lyon' => 'dave@davelyon.net' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/CheatCodes.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/davelyon/CheatCodes.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/daveisonthego'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CheatCodes/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'CheatCodes' => ['CheatCodes/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig = {
+    "SWIFT_ACTIVE_COMPILATION_CONDITIONS" => "CHEAT_${CONFIGURATION}",
+    'SWIFT_VERSION' => '3.0'
+    }
 end

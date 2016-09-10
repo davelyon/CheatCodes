@@ -1,0 +1,26 @@
+{
+  "name": "CheatCodes",
+  "version": "0.1.0",
+  "summary": "A short description of CheatCodes.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CheatCodes",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dave Lyon": "dave@davelyon.net"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CheatCodes.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CheatCodes/Classes/**/*",
+  "pod_target_xcconfig": {
+    "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "CHEAT_${CONFIGURATION}",
+    "SWIFT_VERSION": "3.0"
+  }
+}
