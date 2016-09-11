@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CheatCodes'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'UIKeyCommand shortcuts for debugging applications in the simulator'
 
   s.description      = <<-DESC
@@ -33,4 +33,9 @@ DESC
     'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'CHEAT_${CONFIGURATION}',
     'SWIFT_VERSION' => '3.0'
     }
+
+  # This lets us bypass broken pod linting currently
+  if ENV["CHEAT_IS_LINTING"]
+      s.user_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  end
 end
