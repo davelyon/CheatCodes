@@ -4,10 +4,6 @@
 [![License](https://img.shields.io/cocoapods/l/CheatCodes.svg?style=flat)](http://cocoapods.org/pods/CheatCodes)
 [![Platform](https://img.shields.io/cocoapods/p/CheatCodes.svg?style=flat)](http://cocoapods.org/pods/CheatCodes)
 
-## WARNING
-
-While this pod is configured to make itself essentially empty for "Release" builds, it's possible that your projecy may use an alternate build configuration name for app store releases. You should take care to ensure that this pod is *not* available in any publicly available builds.
-
 ## About
 
 CheatCodes is a drop in tool to enable some basic debugging functionality in the simulator by using `UIKeyCommand`.
@@ -22,6 +18,10 @@ Available Cheat Codes:
 	^ + l: Print autolayout backtrace
 	^ + d: Print documents directory path
 ```
+
+## WARNING
+
+While this pod is configured to make itself essentially empty for "Release" builds, it's possible that your projecy may use an alternate build configuration name for app store releases. You should take care to ensure that this pod is *not* available in any publicly available builds.
 
 ## Using
 
