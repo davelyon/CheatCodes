@@ -1,11 +1,3 @@
-#
-# Be sure to run `pod lib lint CheatCodes.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'CheatCodes'
   s.version          = '0.1.5'
@@ -38,7 +30,7 @@ DESC
   s.source_files = 'CheatCodes/Classes/**/*'
 
   s.pod_target_xcconfig = {
-    "SWIFT_ACTIVE_COMPILATION_CONDITIONS" => "CHEAT_${CONFIGURATION}",
+    'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'CHEAT_${CONFIGURATION}',
     'SWIFT_VERSION' => '3.0'
     }
 end
