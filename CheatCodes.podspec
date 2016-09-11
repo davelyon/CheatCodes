@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CheatCodes'
-  s.version          = '0.1.0'
+  s.version          = '0.1.5'
   s.summary          = 'UIKeyCommand shortcuts for debugging applications in the simulator'
 
   s.description      = <<-DESC
