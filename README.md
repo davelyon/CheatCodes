@@ -16,21 +16,59 @@ Currently, it ships with the following already available:
 
 ```
 Available Cheat Codes:
+	^ + h: Print the list of available commands
 	^ + t: Cycle tintAdjustmentMode
 	^ + u: Print user defaults
 	^ + l: Print autolayout backtrace
 	^ + d: Print documents directory path
-	^ + h: Print the list of available commands
 ```
 
 ## Using
 
+### Flags
+
+In Xcode 8, add to your project under `Active Compilation Conditions` (SWIFT_ACTIVE_COMPILATION_CONDITIONS):
+
+```
+Active Compilation Conditions > Debug > CHEATS_ENABLED
+```
+
+### Basic Usage
+
 ```swift
 class AppDelegate {
+#if CHEATS_ENABLED
   override var keyCommands: [UIKeyCommand]? {
     return UIKeyCommand.cheatCodes
   }
+#endif
 }
+```
+
+### Adding Custom Commands
+
+```swift
+#if CHEATS_ENABLED
+extension AppDelegate {
+
+    func configureCustomCheats() {
+        [
+            CheatCodeCommand(input: "g", action: #selector(logInUser), discoverabilityTitle: "Log in a default user account"),
+            CheatCodeCommand(input: "f", modifierFlags: [.command, .alternate], action: #selector(resetFirstRunScreens), discoverabilityTitle: "Reset all first run screens"),
+
+        ].forEach { UIKeyCommand.addCheatCode($0) }
+
+    }
+
+    func logInUser() {
+        print("Log in a user")
+    }
+
+    func resetFirstRunScreens() {
+        print("First run screens reset!")
+    }
+}
+#endif
 ```
 
 ## Notes

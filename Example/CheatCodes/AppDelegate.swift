@@ -46,3 +46,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+/// Example of custom commands
+extension AppDelegate {
+
+    func configureCustomCheats() {
+        [
+            CheatCodeCommand(input: "g", action: #selector(logInUser), discoverabilityTitle: "Log in a default user account"),
+            CheatCodeCommand(input: "f", modifierFlags: [.command, .alternate], action: #selector(resetFirstRunScreens), discoverabilityTitle: "Reset all first run screens"),
+
+        ].forEach { UIKeyCommand.addCheatCode($0) }
+
+    }
+
+    func logInUser() {
+        print("Log in a user")
+    }
+
+    func resetFirstRunScreens() {
+        print("First run screens reset!")
+    }
+}
