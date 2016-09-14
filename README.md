@@ -21,7 +21,7 @@ Available Cheat Codes:
 
 ## WARNING
 
-While this pod is configured to make itself essentially empty for "Release" builds, it's possible that your projecy may use an alternate build configuration name for app store releases. You should take care to ensure that this pod is *not* available in any publicly available builds.
+While this pod is configured to make itself essentially empty for "Release" builds, it's possible that your project may use an alternate build configuration name for app store releases. You should take care to ensure that this pod is *not* available in any publicly available builds.
 
 ## Using
 
