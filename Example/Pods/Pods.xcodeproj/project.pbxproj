@@ -15,6 +15,7 @@
 		CBE472AC6AEE305A4A3CAE3C12472C95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		D543B1131D84D05600103639 /* CheatCodeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B1121D84D05600103639 /* CheatCodeCommand.swift */; };
 		D543B1151D84D0CA00103639 /* UIKeyModifierFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */; };
+		D5DD5CFE1D8F572100BFA475 /* FormattedKeyValuePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */; };
 		EB087BC867FDC7E01439149D85A48D46 /* Pods-CheatCodes_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9A19812E739A1209294A54254D721 /* Pods-CheatCodes_Example-dummy.m */; };
 		EDFF9401DD38E62333DA3BE101593F77 /* Pods-CheatCodes_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8619A2F56CC17C897A1D530CC2255DE8 /* Pods-CheatCodes_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64E3510084F31A5D8474A2228813847 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -62,6 +63,7 @@
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D543B1121D84D05600103639 /* CheatCodeCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatCodeCommand.swift; sourceTree = "<group>"; };
 		D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKeyModifierFlags.swift; sourceTree = "<group>"; };
+		D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedKeyValuePrinter.swift; sourceTree = "<group>"; };
 		D604B5E0401F727B7CB4608E4CC792AF /* Pods-CheatCodes_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheatCodes_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DB8B9C39F83B6BDC20EBBA3020BBCD8D /* Pods-CheatCodes_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheatCodes_Example-umbrella.h"; sourceTree = "<group>"; };
 		F02621DBF8847B73604F55CFDEA4C5AA /* Pods_CheatCodes_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheatCodes_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			children = (
 				D543B1121D84D05600103639 /* CheatCodeCommand.swift */,
 				099EB141C22C531B316079935A43CD21 /* CheatCodes.swift */,
+				D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */,
 				D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */,
 			);
 			path = Classes;
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				266147682D9604D75C4AB885D6DD13D7 /* CheatCodes-dummy.m in Sources */,
+				D5DD5CFE1D8F572100BFA475 /* FormattedKeyValuePrinter.swift in Sources */,
 				D543B1131D84D05600103639 /* CheatCodeCommand.swift in Sources */,
 				D543B1151D84D0CA00103639 /* UIKeyModifierFlags.swift in Sources */,
 				8D5889B0A643C2FBC89BD999196E001C /* CheatCodes.swift in Sources */,
