@@ -1,12 +1,11 @@
 import Foundation
 
 /**
- A simple wrapper around a Dictionary<String:String> with a title that prints
+ A simple wrapper around a collection of `(String,String)` (or, (Key,Value)) with a title that prints
  the title, and the dictionary with the keys right aligned to the longest key.
  */
 public struct FormattedKeyValuePrinter {
     public let title: String
-//    var keyValuePairs = [String:String]()
     var keyValuePairs = [(String,String)]()
     var maxKeyLength = 0
 

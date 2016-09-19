@@ -13,10 +13,12 @@ fileprivate extension Cheat {
 }
 
 // MARK: - Cheat Codes Public Infterface
+/// CheatCodes additions
 extension UIKeyCommand {
 
     #if CHEATS_Release
 
+    /// :nodoc:
     @nonobjc public static let cheatCodes: [UIKeyCommand] = []
 
     #else
@@ -33,7 +35,7 @@ extension UIKeyCommand {
     This will enable the code to be shown in the `help` output, and
     will make it globally available
 
-    - Parameter command:    A new instance of `CheatCodeCommand` to register for
+    - parameter command:    A new instance of `CheatCodeCommand` to register for
                             availability throughout your app
     */
     @nonobjc public static func addCheatCode(_ command: CheatCodeCommand) {
@@ -45,8 +47,8 @@ extension UIKeyCommand {
     
     Create and use a print formatter that prints out a table of Key/Value pairs
 
-    - Parameter title:    The title of the data set
-    - Parameter contents:   A block that yields a `FormattedKeyValuePrinter`
+    - parameter title:    The title of the data set
+    - parameter contents:   A block that yields a `FormattedKeyValuePrinter`
                             you may call `addKey(_: String, value: String)` on
                             to add items to the formatted output
      */
