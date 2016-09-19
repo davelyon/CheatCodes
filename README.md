@@ -12,11 +12,15 @@ Currently, it ships with the following already available:
 
 ```
 Available Cheat Codes:
-	^ + h: Print the list of available commands
-	^ + t: Cycle tintAdjustmentMode
-	^ + u: Print user defaults
-	^ + l: Print autolayout backtrace
-	^ + d: Print documents directory path
+======================
+ ⇧ + ^ + d: Print documents directory path
+ ⇧ + ^ + e: Re-enable user interaction
+ ⇧ + ^ + h: Print the list of available commands
+ ⇧ + ^ + i: Print general device info
+ ⇧ + ^ + l: Print autolayout backtrace
+ ⇧ + ^ + o: Print the current trait collection (for the main window)
+ ⇧ + ^ + t: Cycle tintAdjustmentMode
+ ⇧ + ^ + u: Print user defaults
 ```
 
 ## WARNING
