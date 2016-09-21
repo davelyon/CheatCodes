@@ -6,9 +6,9 @@
 
 ## About
 
-CheatCodes is a drop in tool to enable some basic debugging functionality in the simulator by using `UIKeyCommand`.
+CheatCodes is a drop in tool to enable debugging functionality in the simulator by using `UIKeyCommand`. It also provides tools to build your own custom commands with formatted output.
 
-Currently, it ships with the following already available:
+The following commands are available by default:
 
 ```
 Available Cheat Codes:
