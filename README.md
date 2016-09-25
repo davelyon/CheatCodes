@@ -16,8 +16,6 @@ Available Cheat Codes:
  ⌘ + ⇧ + ^ + ↓: Trigger restorable state preservation
      ⇧ + ^ + d: Print documents directory path
      ⇧ + ^ + e: Re-enable user interaction
-     ⌘ + ⌥ + f: Reset all first run screens
-     ⇧ + ^ + g: Log in a default user account
      ⇧ + ^ + h: Print the list of available commands
      ⇧ + ^ + i: Print general device info
      ⇧ + ^ + l: Print autolayout backtrace
