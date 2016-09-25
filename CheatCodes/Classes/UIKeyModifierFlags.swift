@@ -1,13 +1,14 @@
 import UIKit
 
 extension UIKeyModifierFlags {
+
     func printableKeys() -> String {
         return [
             (contains(.command), "⌘"),
             (contains(.alternate), "⌥"),
             (contains(.shift), "⇧"),
             (contains(.control), "^"),
-            (contains(.alphaShift), "CAPS")
+            (contains(.alphaShift), "⇪")
             ]
             .filter { keep, _ -> Bool in
                 keep
