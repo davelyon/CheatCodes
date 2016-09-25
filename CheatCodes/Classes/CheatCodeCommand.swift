@@ -36,8 +36,19 @@ internal extension CheatCodeCommand {
         }
     }
 
+    var prettyInput: String {
+        switch input {
+        case UIKeyInputUpArrow: return "↑"
+        case UIKeyInputLeftArrow: return "←"
+        case UIKeyInputDownArrow: return "↓"
+        case UIKeyInputRightArrow: return "→"
+        case UIKeyInputEscape: return "⎋"
+        default: return input
+        }
+    }
+
     var keyCombo: String {
-        return "\(modifierFlags.printableKeys()) + \(input)"
+        return "\(modifierFlags.printableKeys()) + \(prettyInput)"
     }
 
 }
