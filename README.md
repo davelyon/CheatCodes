@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/CheatCodes.svg?style=flat)](http://cocoapods.org/pods/CheatCodes)
 [![License](https://img.shields.io/cocoapods/l/CheatCodes.svg?style=flat)](http://cocoapods.org/pods/CheatCodes)
 [![Platform](https://img.shields.io/cocoapods/p/CheatCodes.svg?style=flat)](http://cocoapods.org/pods/CheatCodes)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/CheatCodes.svg?maxAge=2592000)](http://cocoadocs.org/docsets/CheatCodes)
 
 ## About
 
