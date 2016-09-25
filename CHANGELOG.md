@@ -1,5 +1,34 @@
 Changelog:
 
+# Version 0.2.1
+
+### New Commands:
+
+* Now able to force application state preservation
+
+```
+ ⌘ + ⇧ + ^ + ↓: Trigger restorable state preservation
+```
+
+### Changes
+
+* Support for `UIKeyInput*` constants as `input` for UIKeyCommand print formatting
+
+```swift
+    var prettyInput: String {
+        switch input {
+        case UIKeyInputUpArrow: return "↑"
+        case UIKeyInputLeftArrow: return "←"
+        case UIKeyInputDownArrow: return "↓"
+        case UIKeyInputRightArrow: return "→"
+        case UIKeyInputEscape: return "⎋"
+        default: return input
+        }
+    }
+```
+
+* `.alphaShift` as a `modifierFlag` now outputs `⇪` instead of `CAPS` in the help text
+
 # Version 0.2.0
 
 ### Changes
