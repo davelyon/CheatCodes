@@ -10,6 +10,7 @@ fileprivate extension Cheat {
     static let traitCollection      = #selector(UIKeyCommand.showCurrentTraitCollection)
     static let dumpDetails          = #selector(UIKeyCommand.showDeviceDetails)
     static let enableInteraction    = #selector(UIKeyCommand.enableUserInteraction)
+    static let saveApplicationState = #selector(UIKeyCommand.forceStatePreservation)
 }
 
 // MARK: - Cheat Codes Public Infterface
@@ -75,6 +76,7 @@ internal extension UIKeyCommand {
         CheatCodeCommand(input: "o", action: .traitCollection, discoverabilityTitle: "Print the current trait collection (for the main window)"),
         CheatCodeCommand(input: "i", action: .dumpDetails, discoverabilityTitle: "Print general device info"),
         CheatCodeCommand(input: "e", action: .enableInteraction, discoverabilityTitle: "Re-enable user interaction"),
+        CheatCodeCommand(input: UIKeyInputDownArrow, modifierFlags: [.control, .shift, .command], action: .saveApplicationState, discoverabilityTitle: "Trigger restorable state preservation"),
         ]
 
     func showHelp() {
@@ -152,6 +154,21 @@ internal extension UIKeyCommand {
             formatter.addKey("System Version", value: String(device.systemVersion))
             formatter.addKey("Vendor ID", value: device.identifierForVendor?.description ?? "")
         }
+    }
+
+    /// Force application state preservation
+    func forceStatePreservation() {
+        let app = UIApplication.shared
+
+        let shouldSave = #selector(UIApplicationDelegate.application(_:shouldSaveApplicationState:))
+        let shouldRestore = #selector(UIApplicationDelegate.application(_:shouldRestoreApplicationState:))
+        guard let delegate = app.delegate, delegate.responds(to: shouldSave), delegate.responds(to: shouldRestore) else {
+            print("Cannot force state preservation. AppDelegate must implement: \n\t-\(shouldSave) \n\t-\(shouldRestore)")
+            return
+        }
+
+        print("Attempting to force application state preservation")
+        app.perform(Selector(("_saveApplicationPreservationStateIfSupported")))
     }
     #endif
 }
