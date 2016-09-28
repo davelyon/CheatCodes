@@ -28,6 +28,7 @@ public struct CheatCodeCommand {
 }
 
 internal extension CheatCodeCommand {
+
     func toKeyCommand() -> UIKeyCommand {
         if #available(iOS 9.0, *) {
             return UIKeyCommand(input: input, modifierFlags: modifierFlags, action: action, discoverabilityTitle: discoverabilityTitle)

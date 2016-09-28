@@ -58,6 +58,24 @@ extension UIKeyCommand {
         contents(&formatter)
         formatter.printContents()
     }
+}
+
+public protocol CheatCodeResponder: CustomDebugStringConvertible {
+    var cheatCodes: [CheatCodeCommand] { get }
+}
+
+public extension UIResponder {
+
+    func addCheatCodes() {
+        if #available(iOS 9.0, *) {
+            guard let viewController = self as? UIViewController, viewController is CheatCodeResponder else { return }
+            (self as! CheatCodeResponder).cheatCodes.forEach { code in
+                viewController.addKeyCommand(code.toKeyCommand())
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
 
 }
 
@@ -86,6 +104,24 @@ internal extension UIKeyCommand {
             }).forEach {
                 formatter.addKey(" \($0.keyCombo)", value: $0.discoverabilityTitle)
             }
+        }
+
+        guard let window = UIApplication.shared.keyWindow else { return }
+
+        let bottomResponder = window.perform(Selector(("_deepestUnambiguousResponder"))).takeUnretainedValue() as? UIResponder
+        var next: UIResponder? = bottomResponder?.next
+        while next != nil {
+            if let cheater = next as? CheatCodeResponder {
+                let cheaterType = type(of: cheater)
+                tableFormatted(title: "\(cheaterType) Cheat Codes") { formatter2 in
+                    cheater.cheatCodes.sorted(by: { (c1, c2) -> Bool in
+                        c1.input <= c2.input
+                    }).forEach {
+                        formatter2.addKey(" \($0.keyCombo)", value: $0.discoverabilityTitle)
+                    }
+                }
+            }
+            next = next!.next
         }
     }
 

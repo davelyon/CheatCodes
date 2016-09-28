@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import CheatCodes
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    let firstRunKey = "showedFirstRunView"
+
+    var hasSeenFirstTimeView: Bool {
+        get { return UserDefaults.standard.bool(forKey: firstRunKey) }
+        set { UserDefaults.standard.set(hasSeenFirstTimeView, forKey: firstRunKey) }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if !hasSeenFirstTimeView {
+            showFirstTimeView()
+        }
+
+        // We need to `opt in` somewhere
+        addCheatCodes()
+    }
+
+    func showFirstTimeView() {
+        hasSeenFirstTimeView = true
+        // Add a view over the whole main view
+        print("Gonna show a view!")
     }
 
 }
 
+extension ViewController: CheatCodeResponder {
+    var cheatCodes: [CheatCodeCommand] {
+        return [
+            CheatCodeCommand(input: UIKeyInputUpArrow, modifierFlags: [.control,.command], action: #selector(showFirstTimeView), discoverabilityTitle: "Show the 'first time' screen")
+        ]
+    }
+}
