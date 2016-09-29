@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CheatCodes'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'UIKeyCommand shortcuts for debugging applications in the simulator'
 
   s.description      = <<-DESC
@@ -14,8 +14,6 @@ Available Cheat Codes:
  ⌘ + ⇧ + ^ + ↓: Trigger restorable state preservation
      ⇧ + ^ + d: Print documents directory path
      ⇧ + ^ + e: Re-enable user interaction
-     ⌘ + ⌥ + f: Reset all first run screens
-     ⇧ + ^ + g: Log in a default user account
      ⇧ + ^ + h: Print the list of available commands
      ⇧ + ^ + i: Print general device info
      ⇧ + ^ + l: Print autolayout backtrace
@@ -36,8 +34,7 @@ DESC
   s.source_files = 'CheatCodes/Classes/**/*'
 
   s.pod_target_xcconfig = {
-    'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'CHEAT_${CONFIGURATION}',
-    'SWIFT_VERSION' => '3.0'
-    }
+    'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'CHEATS_${CONFIGURATION}',
+  }
 
 end

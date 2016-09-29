@@ -5,14 +5,20 @@ import Foundation
  the title, and the dictionary with the keys right aligned to the longest key.
  */
 public struct FormattedKeyValuePrinter {
+    /// A title for the generated output
     public let title: String
-    var keyValuePairs = [(String,String)]()
-    var maxKeyLength = 0
+
+    private var keyValuePairs = [(String,String)]()
+    private var maxKeyLength = 0
 
     init(title: String) {
         self.title = title
     }
 
+    /** Add a key and value to the formatted output
+    - parameter key: a descriptor for the value shown
+    - parameter value: the relevant piece of data being described
+    */
     public mutating func addKey(_ key: String, value: String?) {
         maxKeyLength = max(maxKeyLength, key.characters.count)
         keyValuePairs.append((key,value ?? "(NO VALUE)"))

@@ -51,7 +51,32 @@ class AppDelegate {
 }
 ```
 
-### Adding Custom Commands
+### Adding Custom Commands (to a view controller)
+
+```swift
+import UIKit
+import CheatCodes
+class MyViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // When compiled for a release build, this method does nothing
+        addCheatCodes()
+    }
+}
+
+#if CHEATS_ENABLED
+extension MyViewController: CheatCodeResponder {
+    var cheatCodes: [CheatCodeCommand] {
+        return [
+            CheatCodeCommand(input: UIKeyInputUpArrow, modifierFlags: [.control,.command], action: #selector(showFirstTimeView), discoverabilityTitle: "Show the 'first time' screen")
+        ]
+    }
+}
+#endif
+```
+
+### Adding Custom Commands (global)
 
 ```swift
 #if CHEATS_ENABLED

@@ -13,6 +13,7 @@
 		8E3194D934DDEC10B42FC04A3153EEC6 /* Pods-CheatCodes_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BABA845FFEFF5932EEC617A8EFC022A /* Pods-CheatCodes_Tests-dummy.m */; };
 		C9670584F7BCB0F372E9A50CD38754EB /* Pods-CheatCodes_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8B9C39F83B6BDC20EBBA3020BBCD8D /* Pods-CheatCodes_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE472AC6AEE305A4A3CAE3C12472C95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D530FA8D1D9D8E3400A404ED /* CheatCodeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530FA8C1D9D8E3400A404ED /* CheatCodeResponder.swift */; };
 		D543B1131D84D05600103639 /* CheatCodeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B1121D84D05600103639 /* CheatCodeCommand.swift */; };
 		D543B1151D84D0CA00103639 /* UIKeyModifierFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */; };
 		D5DD5CFE1D8F572100BFA475 /* FormattedKeyValuePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */; };
@@ -61,6 +62,7 @@
 		CD4690E310F3C3AB85EADDEFD2DFDF69 /* CheatCodes-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheatCodes-prefix.pch"; sourceTree = "<group>"; };
 		CD8941ECAE0440A44385894602C654FC /* Pods-CheatCodes_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheatCodes_Tests.modulemap"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D530FA8C1D9D8E3400A404ED /* CheatCodeResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatCodeResponder.swift; sourceTree = "<group>"; };
 		D543B1121D84D05600103639 /* CheatCodeCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatCodeCommand.swift; sourceTree = "<group>"; };
 		D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKeyModifierFlags.swift; sourceTree = "<group>"; };
 		D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedKeyValuePrinter.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D543B1121D84D05600103639 /* CheatCodeCommand.swift */,
+				D530FA8C1D9D8E3400A404ED /* CheatCodeResponder.swift */,
 				099EB141C22C531B316079935A43CD21 /* CheatCodes.swift */,
 				D5DD5CFD1D8F572000BFA475 /* FormattedKeyValuePrinter.swift */,
 				D543B1141D84D0CA00103639 /* UIKeyModifierFlags.swift */,
@@ -359,6 +362,7 @@
 				D543B1131D84D05600103639 /* CheatCodeCommand.swift in Sources */,
 				D543B1151D84D0CA00103639 /* UIKeyModifierFlags.swift in Sources */,
 				8D5889B0A643C2FBC89BD999196E001C /* CheatCodes.swift in Sources */,
+				D530FA8D1D9D8E3400A404ED /* CheatCodeResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +547,7 @@
 				PRODUCT_NAME = CheatCodes;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "CHEATS_${CONFIGURATION}";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -648,6 +653,7 @@
 				PRODUCT_NAME = CheatCodes;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "CHEATS_${CONFIGURATION}";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

@@ -25,7 +25,9 @@ class ViewController: UIViewController {
         }
 
         // We need to `opt in` somewhere
-        addCheatCodes()
+        if #available(iOS 9.0, *) {
+            addCheatCodes()
+        }
     }
 
     func showFirstTimeView() {

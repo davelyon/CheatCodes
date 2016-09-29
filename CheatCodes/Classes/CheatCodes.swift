@@ -14,7 +14,10 @@ fileprivate extension Cheat {
 }
 
 // MARK: - Cheat Codes Public Infterface
-/// CheatCodes additions
+/**
+ Cheat code extensions for `UIKeyCommand` -- adding them here privately makes them
+ accessible when installing them at the `AppDelegate` level.
+ */
 extension UIKeyCommand {
 
     #if CHEATS_Release
@@ -58,25 +61,6 @@ extension UIKeyCommand {
         contents(&formatter)
         formatter.printContents()
     }
-}
-
-public protocol CheatCodeResponder: CustomDebugStringConvertible {
-    var cheatCodes: [CheatCodeCommand] { get }
-}
-
-public extension UIResponder {
-
-    func addCheatCodes() {
-        if #available(iOS 9.0, *) {
-            guard let viewController = self as? UIViewController, viewController is CheatCodeResponder else { return }
-            (self as! CheatCodeResponder).cheatCodes.forEach { code in
-                viewController.addKeyCommand(code.toKeyCommand())
-            }
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-
 }
 
 // MARK: - Cheat Codes Private Interface

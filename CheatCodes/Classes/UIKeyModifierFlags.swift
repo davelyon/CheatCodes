@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIKeyModifierFlags {
+internal extension UIKeyModifierFlags {
 
     func printableKeys() -> String {
         return [
